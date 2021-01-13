@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const SyledParagraph = styled.p`
   margin: 0;
   color: #7f92a4;
+  line-height: 1;
 `;
 
 type TextProps = {
