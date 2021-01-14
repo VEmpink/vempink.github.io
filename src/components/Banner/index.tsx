@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import {Text} from '../common';
 import Logo from './Logo';
+import Socials from './Socials';
+import Switch from '@bit/mui-org.material-ui.switch';
 
 const StyledDiv = styled.div`
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 `;
 
 const titleStyle: React.CSSProperties = {
@@ -15,35 +16,34 @@ const titleStyle: React.CSSProperties = {
   fontWeight: 900,
 };
 
-const LinkRepo = styled.a`
-  color: #526475;
-`;
-
 function Banner() {
   return (
     <StyledDiv>
-      <div>
-        <Logo />
+      <Logo />
 
-        <div style={{marginTop: 40, marginBottom: 40}}>
-          <Text style={titleStyle}>Halo! Firmansyah here,</Text>
-          <Text style={titleStyle}>I'm JavaScript Developer.</Text>
-        </div>
-
-        <Text style={{marginBottom: 8, fontSize: 15, color: '#526475'}}>
-          Currently looking for a Job with over 2 years experience in
-          JavaScript, highly understanding of Native Codes, and a fan of React
-          Framework.
-        </Text>
-
-        <LinkRepo
-          href='https://github.com/VEmpink?tab=repositories'
-          target='_blank'
-          style={{fontSize: 14}}
-        >
-          See my Works/Repositories
-        </LinkRepo>
+      <div style={{marginTop: 40, marginBottom: 40}}>
+        <Text style={titleStyle}>Halo! Firmansyah here,</Text>
+        <Text style={titleStyle}>I'm JavaScript Developer.</Text>
       </div>
+
+      <Text style={{marginBottom: 8, fontSize: 15, color: '#526475'}}>
+        Currently looking for a Job with over 2 years experience in JavaScript,
+        highly understanding of Native Codes, and a fan of React Framework.
+      </Text>
+
+      <a
+        href='https://github.com/VEmpink?tab=repositories'
+        target='_blank'
+        style={{fontSize: 14, color: '#526475'}}
+      >
+        See my Works/Repositories
+      </a>
+
+      <Socials />
+
+      <Switch onChange={(e) => {
+        console.log(e);
+      }} />
     </StyledDiv>
   );
 }
