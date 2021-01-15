@@ -13,11 +13,11 @@ const Div = styled.div`
 
 const Title = styled(Text)`
   font-size: 40px;
-  font-weight: 900;
+  font-weight: 800;
 `;
 
 const Subtitle = styled(Text)`
-  font-size: 15;
+  font-size: 14px;
   color: #526475;
 `;
 
@@ -31,7 +31,7 @@ function Banner() {
         <Title>I'm JavaScript Developer.</Title>
       </div>
 
-      <Subtitle style={{marginBottom: 8}}>
+      <Subtitle style={{marginBottom: 16}}>
         Currently looking for a Job with over 2 years experience in JavaScript,
         highly understanding of Native Codes, and a fan of React Framework.
       </Subtitle>
