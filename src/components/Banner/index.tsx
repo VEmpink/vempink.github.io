@@ -4,45 +4,51 @@ import Logo from './Logo';
 import Socials from './Socials';
 import Switch from './Switch';
 
-const StyledDiv = styled.div`
+const Div = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
-const titleStyle: React.CSSProperties = {
-  fontSize: 40,
-  fontWeight: 900,
-};
+const Title = styled(Text)`
+  font-size: 40px;
+  font-weight: 900;
+`;
+
+const Subtitle = styled(Text)`
+  font-size: 15;
+  color: #526475;
+`;
 
 function Banner() {
   return (
-    <StyledDiv>
+    <Div>
       <Logo />
 
       <div style={{marginTop: 40, marginBottom: 40}}>
-        <Text style={titleStyle}>Halo! Firmansyah here,</Text>
-        <Text style={titleStyle}>I'm JavaScript Developer.</Text>
+        <Title>Halo! Firmansyah here,</Title>
+        <Title>I'm JavaScript Developer.</Title>
       </div>
 
-      <Text style={{marginBottom: 8, fontSize: 15, color: '#526475'}}>
+      <Subtitle style={{marginBottom: 8}}>
         Currently looking for a Job with over 2 years experience in JavaScript,
         highly understanding of Native Codes, and a fan of React Framework.
-      </Text>
+      </Subtitle>
 
-      <a
+      <Subtitle
+        as='a'
         href='https://github.com/VEmpink?tab=repositories'
         target='_blank'
-        style={{fontSize: 14, color: '#526475'}}
+        rel='noreferrer'
       >
         See my Works/Repositories
-      </a>
+      </Subtitle>
 
       <Socials />
 
       <Switch />
-    </StyledDiv>
+    </Div>
   );
 }
 
