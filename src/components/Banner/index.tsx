@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Text} from '../common';
 import Logo from './Logo';
 import Socials from './Socials';
-import Switch from '@bit/mui-org.material-ui.switch';
+import Switch from './Switch';
 
 const StyledDiv = styled.div`
   height: 100vh;
@@ -41,9 +41,7 @@ function Banner() {
 
       <Socials />
 
-      <Switch onChange={(e) => {
-        console.log(e);
-      }} />
+      <Switch />
     </StyledDiv>
   );
 }
