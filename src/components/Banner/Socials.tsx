@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import mailIcon from '../../assets/images/mail.svg';
 import whatsappIcon from '../../assets/images/whatsapp.svg';
 import telegramIcon from '../../assets/images/telegram.svg';

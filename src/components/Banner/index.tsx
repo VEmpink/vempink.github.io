@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import {Text} from '../common';
 import Logo from './Logo';
 import Socials from './Socials';
