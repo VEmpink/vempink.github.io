@@ -3,9 +3,13 @@ import styled from 'styled-components/macro';
 import {CurrentThemeContext} from '../../context';
 
 const SwitchWrapper = styled.span`
-  display: inline-block;
+  align-self: flex-start;
   position: relative;
   margin-top: 40px;
+
+  @media (max-height: 420px) {
+    margin-top: 24px;
+  }
 `;
 
 type SwitchTrackProps = {
@@ -18,6 +22,12 @@ const SwitchTrack = styled.div<SwitchTrackProps>`
   border-radius: 10px;
   background-color: ${(props) =>
     props.currentTheme === 'light' ? '#D7E0E7' : '#526475'};
+
+  @media (max-width: 668px) {
+    width: 30px;
+    height: 8px;
+    border-radius: 8px;
+  }
 `;
 
 type SwitchThumbProps = {
@@ -27,6 +37,7 @@ type SwitchThumbProps = {
 const SwitchThumb = styled.div<SwitchThumbProps>`
   position: absolute;
   top: 50%;
+  left: ${(props) => (props.currentTheme === 'light' ? 0 : '16px')};
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -35,6 +46,11 @@ const SwitchThumb = styled.div<SwitchThumbProps>`
   transform: translateY(-50%);
   transition: left 0.3s cubic-bezier(0.4, 0.03, 0, 1);
   cursor: pointer;
+
+  @media (max-width: 668px) {
+    width: 14px;
+    height: 14px;
+  }
 `;
 
 function Switch() {
@@ -46,7 +62,6 @@ function Switch() {
 
       <SwitchThumb
         currentTheme={theme}
-        style={{left: theme === 'light' ? 0 : 16}}
         onClick={() => {
           setTheme(theme === 'light' ? 'dark' : 'light');
         }}

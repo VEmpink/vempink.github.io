@@ -13,6 +13,10 @@ import {Theme} from '../../types';
 const Div = styled.div`
   display: flex;
   margin-top: 40px;
+
+  @media (max-height: 420px) {
+    margin-top: 24px;
+  }
 `;
 
 const Link = styled.a`
@@ -30,6 +34,11 @@ const Svg = styled.svg`
 
   &:hover > * {
     fill: ${({theme}: {theme: Theme}) => theme.textPrimaryColor};
+  }
+
+  @media (max-width: 668px) {
+    width: 16px;
+    height: 16px;
   }
 `;
 
