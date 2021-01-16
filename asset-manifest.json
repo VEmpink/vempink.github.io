@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/static/js/main.a3c58137.chunk.js",
+    "main.js.map": "/static/js/main.a3c58137.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.33c9b4b5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.33c9b4b5.js.map",
+    "static/js/2.25c68134.chunk.js": "/static/js/2.25c68134.chunk.js",
+    "static/js/2.25c68134.chunk.js.map": "/static/js/2.25c68134.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.25c68134.chunk.js.LICENSE.txt": "/static/js/2.25c68134.chunk.js.LICENSE.txt",
+    "static/media/Inter-VariableFont_slnt,wght.f958c681.ttf": "/static/media/Inter-VariableFont_slnt,wght.f958c681.ttf",
+    "static/media/facebook.31f40b6e.svg": "/static/media/facebook.31f40b6e.svg",
+    "static/media/github.b6e63f81.svg": "/static/media/github.b6e63f81.svg",
+    "static/media/linkedin.b8595e51.svg": "/static/media/linkedin.b8595e51.svg",
+    "static/media/mail.3ce75b60.svg": "/static/media/mail.3ce75b60.svg",
+    "static/media/stackoverflow.ada0a69d.svg": "/static/media/stackoverflow.ada0a69d.svg",
+    "static/media/telegram.067989e1.svg": "/static/media/telegram.067989e1.svg",
+    "static/media/whatsapp.9b0eaf65.svg": "/static/media/whatsapp.9b0eaf65.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33c9b4b5.js",
+    "static/js/2.25c68134.chunk.js",
+    "static/js/main.a3c58137.chunk.js"
+  ]
+}
