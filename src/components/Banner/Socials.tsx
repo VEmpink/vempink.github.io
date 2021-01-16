@@ -8,6 +8,7 @@ import linkedinIcon from '../../assets/images/linkedin.svg';
 // import mediumIcon from '../../assets/images/medium.svg';
 // import twitterIcon from '../../assets/images/twitter.svg';
 import facebookIcon from '../../assets/images/facebook.svg';
+import {Theme} from '../../types';
 
 const Div = styled.div`
   display: flex;
@@ -24,11 +25,11 @@ const Svg = styled.svg`
   height: 20px;
 
   & > * {
-    fill: #526475;
+    fill: ${({theme}: {theme: Theme}) => theme.textHintColor};
   }
 
   &:hover > * {
-    fill: #7f92a4;
+    fill: ${({theme}: {theme: Theme}) => theme.textPrimaryColor};
   }
 `;
 

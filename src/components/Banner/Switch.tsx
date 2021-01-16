@@ -1,5 +1,7 @@
-import {useState} from 'react';
+import {useContext} from 'react';
 import styled from 'styled-components/macro';
+import {CurrentThemeContext} from '../../context';
+import {Theme} from '../../types';
 
 const SwitchWrapper = styled.span`
   display: inline-block;
@@ -11,7 +13,10 @@ const SwitchTrack = styled.div`
   width: 32px;
   height: 10px;
   border-radius: 10px;
-  background-color: #526475;
+  /**
+   * Anoying in light mode
+   */
+  background-color: ${({theme}: {theme: Theme}) => theme.textHintColor};
 `;
 
 const SwitchThumb = styled.div`
@@ -20,23 +25,26 @@ const SwitchThumb = styled.div`
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #7f92a4;
+  /**
+   * Anoying in light mode
+   */
+  background-color: ${({theme}: {theme: Theme}) => theme.textPrimaryColor};
   transform: translateY(-50%);
   transition: left 0.3s cubic-bezier(0.4, 0.03, 0, 1);
   cursor: pointer;
 `;
 
 function Switch() {
-  const [isDarkMode, setDarkMode] = useState(true);
+  const {theme, setTheme} = useContext(CurrentThemeContext);
 
   return (
     <SwitchWrapper>
       <SwitchTrack />
 
       <SwitchThumb
-        style={{left: isDarkMode ? 16 : 0}}
+        style={{left: theme === 'light' ? 0 : 16}}
         onClick={() => {
-          setDarkMode(!isDarkMode);
+          setTheme(theme === 'light' ? 'dark' : 'light');
         }}
       />
     </SwitchWrapper>

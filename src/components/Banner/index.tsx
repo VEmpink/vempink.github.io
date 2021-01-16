@@ -3,6 +3,7 @@ import {Text} from '../common';
 import Logo from './Logo';
 import Socials from './Socials';
 import Switch from './Switch';
+import {Theme} from '../../types';
 
 const Div = styled.div`
   height: 100vh;
@@ -18,7 +19,7 @@ const Title = styled(Text)`
 
 const Subtitle = styled(Text)`
   font-size: 14px;
-  color: #526475;
+  color: ${({theme}: {theme: Theme}) => theme.textHintColor};
 `;
 
 function Banner() {
